@@ -44,4 +44,6 @@ public class ItalianFlag {
         g2.setColor(Color.RED);
         g2.fill(red);
     }
+
+
 }

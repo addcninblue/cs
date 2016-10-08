@@ -2,7 +2,6 @@
  * Displays the French flag
  * @author Addison Chan
  * @version 10/04/16
- *
  */ 
 
 import javax.swing.JFrame;

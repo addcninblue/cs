@@ -18,7 +18,7 @@ public class MyFlag extends JComponent{
     */
     public void paintComponent(Graphics g){
         Graphics2D g2 = (Graphics2D) g;
-        FrenchFlag flag = new FrenchFlag(0,0,200);
+        FrenchFlag flag = new FrenchFlag(100,0,100);
         flag.draw(g2);
     }
 
