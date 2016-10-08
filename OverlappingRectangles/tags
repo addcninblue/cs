@@ -1,0 +1,17 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/ff6491f/
+OverlappingRectangles	OverlappingRectangles.java	/^public class OverlappingRectangles {$/;"	c
+RectangleConstructor	RectangleConstructor.java	/^public class RectangleConstructor extends JComponent {$/;"	c
+Rectangles	Rectangles.java	/^    public Rectangles(int x, int y, int width, int height){$/;"	m	class:Rectangles
+Rectangles	Rectangles.java	/^public class Rectangles {$/;"	c
+draw	Rectangles.java	/^    public void draw(Graphics2D g2, boolean color){$/;"	m	class:Rectangles
+height	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
+main	OverlappingRectangles.java	/^    public static void main (String [] args){$/;"	m	class:OverlappingRectangles
+paintComponent	RectangleConstructor.java	/^    public void paintComponent(Graphics g){$/;"	m	class:RectangleConstructor
+width	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
+x	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
+y	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
