@@ -18,13 +18,13 @@ public class RectangleConstructor extends JComponent {
         Graphics2D g2 = (Graphics2D) g;
         Scanner in = new Scanner(System.in);
 
-        System.out.print("Please input the first Rectangle's dimensions in this format (x1, y1, length, width): ");
+        System.out.print("Please input the first Rectangle's dimensions in this format (x, y, length, width): ");
         int r1x1 = in.nextInt();
         int r1y1 = in.nextInt();
         int r1length = in.nextInt();
         int r1width = in.nextInt();
 
-        System.out.print("Please input the second Rectangle's dimensions in this format (x1, y1, length, width): ");
+        System.out.print("Please input the second Rectangle's dimensions in this format (x, y, length, width): ");
         int r2x1 = in.nextInt();
         int r2y1 = in.nextInt();
         int r2length = in.nextInt();
@@ -46,10 +46,20 @@ public class RectangleConstructor extends JComponent {
         // print area
         if (!r3.isEmpty()){
             Point location = r3.getLocation();
-            double area = r3.getSize().getWidth() * r3.getSize().getHeight();
-            String areaString = "The area is " + area;
+            int width = (int) r3.getWidth();
+            int length = (int) r3.getHeight();
+            int area = width * length;
+            // double area = r3.getSize().getWidth() * r3.getSize().getHeight();
+            String areaString = "The overlapping area is " + area;
+
+            int xlocation = (int)location.getX();
+            int ylocation = (int)location.getY();
+
+            int xPosOfString = xlocation + (width/2);
+            int yPosOfString = ylocation + (length/2);
             g2.setColor(Color.BLACK);
-            g2.drawString(areaString, (int)location.getX(), (int)location.getY());
+            g2.drawString(areaString, xPosOfString, yPosOfString);
+            // g2.drawString(areaString, (int)location.getX(), (int)location.getY());
         }
     }
 
@@ -63,7 +73,7 @@ public class RectangleConstructor extends JComponent {
         if (color == 1)
             g2.setColor(Color.BLUE);
         else if (color == 2)
-            g2.setColor(Color.RED);
+            g2.setColor(Color.YELLOW);
         else
             g2.setColor(Color.GREEN);
         g2.fill(r);

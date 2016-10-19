@@ -28,6 +28,10 @@ public class Frame {
         MyFlag m = new MyFlag();
         frame.add(m);
 
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        pack();
+        setSize(screenSize.width,screenSize.height);
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }

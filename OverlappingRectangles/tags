@@ -6,12 +6,6 @@
 !_TAG_PROGRAM_VERSION	0.0.0	/ff6491f/
 OverlappingRectangles	OverlappingRectangles.java	/^public class OverlappingRectangles {$/;"	c
 RectangleConstructor	RectangleConstructor.java	/^public class RectangleConstructor extends JComponent {$/;"	c
-Rectangles	Rectangles.java	/^    public Rectangles(int x, int y, int width, int height){$/;"	m	class:Rectangles
-Rectangles	Rectangles.java	/^public class Rectangles {$/;"	c
-draw	Rectangles.java	/^    public void draw(Graphics2D g2, boolean color){$/;"	m	class:Rectangles
-height	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
+draw	RectangleConstructor.java	/^    public void draw(Rectangle r, Graphics2D g2, int color){$/;"	m	class:RectangleConstructor
 main	OverlappingRectangles.java	/^    public static void main (String [] args){$/;"	m	class:OverlappingRectangles
 paintComponent	RectangleConstructor.java	/^    public void paintComponent(Graphics g){$/;"	m	class:RectangleConstructor
-width	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
-x	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:
-y	Rectangles.java	/^    private int x, y, width, height;$/;"	f	class:Rectangles	file:

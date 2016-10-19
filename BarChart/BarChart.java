@@ -11,7 +11,7 @@ import java.awt.*;
 public class BarChart extends JComponent {
 
     // heights of the bars
-    private int[] heights = new int[]{39, 20, 45, 20, 100, -8, 44, 96, 99, -90};
+    private int[] heights = new int[]{32, 40, 57, -25, 82, -30, 10};
 
     /**
     * testing to paint a rectangle
@@ -70,7 +70,7 @@ public class BarChart extends JComponent {
     */
     public static void main (String [] args){
         // name is BarChart
-        JFrame frame = new JFrame("BarChart");
+        JFrame frame = new JFrame("Addison Chan");
         frame.add(new BarChart());
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();

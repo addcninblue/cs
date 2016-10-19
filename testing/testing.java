@@ -1,7 +1,11 @@
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 public class testing {
     public static void main (String [] args){
-        int testing = -1;
-        String length = Integer.toString(testing);
-        System.out.print(length.length());
+        String bip = "AllWeKnow.mp3";
+        Media hit = new Media(bip);
+        MediaPlayer mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
     }
 }
+
