@@ -1,4 +1,5 @@
 import java.lang.Math;
+import java.awt.geom.*;
 
 /**
  * Library for various geometric functions
@@ -75,5 +76,56 @@ public class Geometry {
     */
     public static double coneSurface(double r, double h){
         return (Math.PI * r * (r + Math.sqrt(Math.pow(h,2) + Math.pow(r, 2))));
+    }
+
+    /**
+    * Finds the perimeter of an ellipse
+    * (Postcondition: perimeter > 0)
+	* @param e Ellipse2D to calculate perimeter of
+    * (Precondition: Ellipse2D e exists)
+    */
+    public static double perimeter(Ellipse2D.Double e){
+        double a = e.height / (double) 2;  // semimajor axis
+        double b = e.width / (double) 2;  // semiminor axis
+        return (Math.PI * (3*(a+b) - Math.sqrt((3*a + b) * (a + 3*b))));
+    }
+
+    /**
+    * Finds the area of an ellipse
+    * (Postcondition: perimeter > 0)
+	* @param e Ellipse2D to calculate area of
+    * (Precondition: Ellipse2D e exists)
+    */
+    public static double area(Ellipse2D.Double e){
+        double a = e.height / (double) 2;  // semimajor axis
+        double b = e.width / (double) 2;  // semiminor axis
+        return (a * b * Math.PI);
+    }
+
+    /**
+    * Returns whether or not a point is inside an ellipse
+    * (Postcondition: returns true or false)
+	* @param p Point2D to check whether is inside Ellipse2D e
+	* @param e Ellipse2D used to check if p is inside
+    * (Precondition: Point2D p exists and Ellipse2D e exists)
+    */
+    public static boolean isInside(Point2D.Double p, Ellipse2D.Double e){
+        return (e.contains(p.getX(), p.getY()));
+    }
+
+    /**
+    * Returns whether or not a point is on an ellipse
+    * (Postcondition: returns true or false)
+	* @param p Point2D to check whether is on Ellipse2D e
+	* @param e Ellipse2D used to check if p is on
+    * (Precondition: Point2D p exists and Ellipse2D e exists)
+    */
+    public static boolean isOnBoundary(Point2D.Double p, Ellipse2D.Double e){
+        double a = e.width / (double) 2;  // semimajor axis
+        double b = e.height / (double) 2;  // semiminor axis
+        double x = p.getX();
+        double y = p.getY();
+        // System.out.print(String.format("%s %s %s %s",a,b,x,y));
+        return (Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1) < 0.01);
     }
 }
