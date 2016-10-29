@@ -123,9 +123,11 @@ public class Geometry {
     public static boolean isOnBoundary(Point2D.Double p, Ellipse2D.Double e){
         double a = e.width / (double) 2;  // semimajor axis
         double b = e.height / (double) 2;  // semiminor axis
-        double x = p.getX();
-        double y = p.getY();
-        // System.out.print(String.format("%s %s %s %s",a,b,x,y));
-        return (Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1) < 0.01);
+        // System.out.print(String.format("%s %s", e.x, e.y));
+        double x = p.getX() - e.x;
+        double y = p.getY() - e.y;
+        // System.out.println(String.format("%s %s %s %s",a,b,x,y));
+        // System.out.print(Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1));
+        return (Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1) < 0.1);
     }
 }
