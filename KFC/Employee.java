@@ -65,7 +65,7 @@ public class Employee
         return this.name;
     }
 
-    /*
+    /**
      * Returns employee wage (pay per hour).
      * (Postcondition: wage >= 0)
      * (Precondition: wage >= 0)

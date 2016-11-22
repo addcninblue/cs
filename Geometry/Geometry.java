@@ -124,8 +124,8 @@ public class Geometry {
         double a = e.width / (double) 2;  // semimajor axis
         double b = e.height / (double) 2;  // semiminor axis
         // System.out.print(String.format("%s %s", e.x, e.y));
-        double x = p.getX() - e.x;
-        double y = p.getY() - e.y;
+        double x = p.getX() - e.getCenterX();
+        double y = p.getY() - e.getCenterY();
         // System.out.println(String.format("%s %s %s %s",a,b,x,y));
         // System.out.print(Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1));
         return (Math.abs(((Math.pow(x,2) / Math.pow(a,2)) + (Math.pow(y,2) / Math.pow(b,2))) - 1) < 0.1);

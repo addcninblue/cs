@@ -25,6 +25,7 @@ public class KFC
     /**
      * Adds employee to list.
      * (Postcondition: employees +1)
+     * @param e Employee to add to company
      * (Precondition: e exists)
      */
     public void addEmployee(Employee e)
@@ -36,7 +37,7 @@ public class KFC
      * Gives all employees a raise.
      * (Postcondition: all employees' wages exist)
      * @param increase amount of money to increase each employee by
-     * (Precondition: all employees' wages are increased)
+     * (Precondition: all employees' wages are positive)
      */
     public void raiseForAll(double increase)
     {
@@ -109,22 +110,7 @@ public class KFC
             else
                 wage = hours * employees.get(i).getWage();
             // System.out.format("%s worked for %s hours and earned %s.\n", name, hours, wage);
-            System.out.format("%20s | %10s | %10s\n", name, hours, wage);
+            System.out.format("%20s | %10s | %10.2f\n", name, hours, wage);
         }
-    }
-
-    /**
-    * Adds working hours for an employee
-    * (Postcondition: the given amount of hours will be added to the specified employee)
-	* @param name name of employee to add hours to
-	* @param hours number of hours worked
-    * (Precondition: name exists, hours >= 0)
-    */
-    public void addHours(String name, double hours){
-        int indexOfEmployee = findEmployeeIndex(name);
-        if (indexOfEmployee != -1)
-            employees.get(indexOfEmployee).setHours(hours);
-        else
-            System.out.println("Not an employee.");
     }
 }

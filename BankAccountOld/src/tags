@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/ff6491f/
+AssertEquals	JUnitImposter.java	/^    static void AssertEquals(double item1, double item2, int line) throws Exception {$/;"	m	class:JUnitImposter
+BankAccount	BankAccount.java	/^    public BankAccount(){$/;"	m	class:BankAccount
+BankAccount	BankAccount.java	/^public class BankAccount {$/;"	c
+JUnitImposter	JUnitImposter.java	/^public class JUnitImposter {$/;"	c
+PersonalBanking	PersonalBanking.java	/^public class PersonalBanking$/;"	c
+SecondChoice	tester.java	/^    public static void SecondChoice(){$/;"	m	class:tester
+TimeDepositAccount	TimeDepositAccount.java	/^    public TimeDepositAccount(double balance, int monthsLeftToMaturity, double interestRate){$/;"	m	class:TimeDepositAccount
+TimeDepositAccount	TimeDepositAccount.java	/^public class TimeDepositAccount extends BankAccount {$/;"	c
+accountHolder	BankAccount.java	/^    public String accountHolder;$/;"	f	class:BankAccount
+accountNumber	BankAccount.java	/^    public String accountNumber;$/;"	f	class:BankAccount
+addInterest	TimeDepositAccount.java	/^    public void addInterest(){$/;"	m	class:TimeDepositAccount
+balance	BankAccount.java	/^    private double balance;$/;"	f	class:BankAccount	file:
+deposit	BankAccount.java	/^    public void deposit(double depositAmount){ \/\/ no return value$/;"	m	class:BankAccount
+getBalance	BankAccount.java	/^    public double getBalance(){$/;"	m	class:BankAccount
+interestRate	TimeDepositAccount.java	/^    double interestRate;$/;"	f	class:TimeDepositAccount
+main	JUnitImposter.java	/^    public static void main(String[] args) throws Exception {$/;"	m	class:JUnitImposter
+main	PersonalBanking.java	/^    public static void main(String[] args)$/;"	m	class:PersonalBanking
+main	tester.java	/^    public static void main (String [] args){$/;"	m	class:tester
+monthsLeftToMaturity	TimeDepositAccount.java	/^    int monthsLeftToMaturity;$/;"	f	class:TimeDepositAccount
+printStatement	BankAccount.java	/^    public void printStatement(){$/;"	m	class:BankAccount
+setBalance	BankAccount.java	/^    public void setBalance(double balance){$/;"	m	class:BankAccount
+tester	tester.java	/^public class tester {$/;"	c
+withdraw	BankAccount.java	/^    public double withdraw (double withdrawalAmount){$/;"	m	class:BankAccount
+withdraw	TimeDepositAccount.java	/^    public double withdraw(double withdrawalAmount){$/;"	m	class:TimeDepositAccount
