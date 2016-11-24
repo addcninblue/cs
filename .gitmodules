@@ -1,3 +1,9 @@
 [submodule "Airplane"]
 	path = Airplane
 	url = https://github.com/addcninblue/Airplane
+[submodule "projects/Airplane"]
+	path = projects/Airplane
+	url = https://github.com/addcninblue/Airplane
+[submodule "projects/Matrix-Operations"]
+	path = projects/Matrix-Operations
+	url = https://github.com/addcninblue/Matrix-Operations
