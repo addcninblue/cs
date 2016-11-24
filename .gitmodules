@@ -7,3 +7,6 @@
 [submodule "projects/Matrix-Operations"]
 	path = projects/Matrix-Operations
 	url = https://github.com/addcninblue/Matrix-Operations
+[submodule "Matrix-Operations"]
+	path = Matrix-Operations
+	url = https://github.com/addcninblue/Matrix-Operations
