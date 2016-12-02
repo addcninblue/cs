@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/ff6491f/
+Commission	Commission.java	/^    public Commission(String eName, String eAddress, String ePhone, String socSecNumber, double /;"	m	class:Commission
+Commission	Commission.java	/^public class Commission extends Hourly{$/;"	c
+Employee	Employee.java	/^ public Employee (String eName, String eAddress, String ePhone,$/;"	m	class:Employee
+Employee	Employee.java	/^public class Employee extends StaffMember$/;"	c
+Executive	Executive.java	/^ public Executive (String eName, String eAddress, String ePhone,$/;"	m	class:Executive
+Executive	Executive.java	/^public class Executive extends Employee$/;"	c
+Firm	Firm.java	/^public class Firm$/;"	c
+Hourly	Hourly.java	/^ public Hourly (String eName, String eAddress, String ePhone,$/;"	m	class:Hourly
+Hourly	Hourly.java	/^public class Hourly extends Employee$/;"	c
+Staff	Staff.java	/^    public Staff ()$/;"	m	class:Staff
+Staff	Staff.java	/^public class Staff$/;"	c
+StaffMember	StaffMember.java	/^ public StaffMember (String eName, String eAddress, String ePhone)$/;"	m	class:StaffMember
+StaffMember	StaffMember.java	/^abstract public class StaffMember$/;"	c
+Volunteer	Volunteer.java	/^ public Volunteer (String eName, String eAddress, String ePhone)$/;"	m	class:Volunteer
+Volunteer	Volunteer.java	/^public class Volunteer extends StaffMember$/;"	c
+addHours	Hourly.java	/^ public void addHours (int moreHours)$/;"	m	class:Hourly
+addSales	Commission.java	/^    public void addSales(double totalSales){$/;"	m	class:Commission
+address	StaffMember.java	/^ protected String address;$/;"	f	class:StaffMember
+awardBonus	Executive.java	/^ public void awardBonus (double execBonus)$/;"	m	class:Executive
+bonus	Executive.java	/^ private double bonus;$/;"	f	class:Executive	file:
+commissionRate	Commission.java	/^    public double commissionRate; \/\/ percentage of commission the employee earns on sales$/;"	f	class:Commission
+hoursWorked	Hourly.java	/^ private int hoursWorked;$/;"	f	class:Hourly	file:
+main	Firm.java	/^ public static void main (String[] args)$/;"	m	class:Firm
+name	StaffMember.java	/^ protected String name;$/;"	f	class:StaffMember
+pay	Commission.java	/^    public double pay(){$/;"	m	class:Commission
+pay	Employee.java	/^ public double pay()$/;"	m	class:Employee
+pay	Executive.java	/^ public double pay()$/;"	m	class:Executive
+pay	Hourly.java	/^ public double pay()$/;"	m	class:Hourly
+pay	StaffMember.java	/^ public abstract double pay();$/;"	m	class:StaffMember
+pay	Volunteer.java	/^ public double pay()$/;"	m	class:Volunteer
+payRate	Employee.java	/^ protected double payRate;$/;"	f	class:Employee
+payday	Staff.java	/^    public void payday ()$/;"	m	class:Staff
+phone	StaffMember.java	/^ protected String phone;$/;"	f	class:StaffMember
+socialSecurityNumber	Employee.java	/^ protected String socialSecurityNumber;$/;"	f	class:Employee
+staffList	Staff.java	/^    StaffMember[] staffList;$/;"	f	class:Staff
+toString	Commission.java	/^    public String toString(){$/;"	m	class:Commission
+toString	Employee.java	/^ public String toString()$/;"	m	class:Employee
+toString	Hourly.java	/^ public String toString()$/;"	m	class:Hourly
+toString	StaffMember.java	/^ public String toString()$/;"	m	class:StaffMember
+totalSales	Commission.java	/^    public double totalSales;$/;"	f	class:Commission

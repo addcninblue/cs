@@ -1,2 +1,6 @@
-**.class
-/bin/
+*.swp
+out/
+.idea/
+*.iml
+bin/
+*.class
