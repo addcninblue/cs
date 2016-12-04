@@ -21,4 +21,14 @@ public class StudentAdvance extends Advance{
     public double getPrice(){
         return price;
     }
+
+    /**
+     * Overrides Ticket toString method
+     * (Postcondition: string is returned)
+     * @return ticket stats
+     * (Precondition: none)
+     */
+    public String toString(){
+        return String.format("%s\n(student ID required)", super.toString());
+    }
 }
