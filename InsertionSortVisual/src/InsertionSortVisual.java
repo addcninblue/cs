@@ -2,18 +2,17 @@
  * Created by addison on 1/4/17.
  */
 
-// import java.lang.Math;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class SelectionSortVisual extends JComponent {
+public class InsertionSortVisual extends JComponent {
 
     private int[] nums; //heights
 
-    private int cursor, smallest;
+    private int cursor, currentIterator;
 
-    public SelectionSortVisual(int[] nums){
+    public InsertionSortVisual(int[] nums){
         this.nums = nums;
     }
 
@@ -40,10 +39,10 @@ public class SelectionSortVisual extends JComponent {
 
             Rectangle r = new Rectangle();
             // if (i % 2 == 0)
-            // System.out.format("%s, %s, %s\n", i, cursor, nums[smallest]);
+            // System.out.format("%s, %s, %s\n", i, cursor, nums[currentIterator]);
             if(i == cursor){
                 g2.setColor(orange);
-            } else if (i == smallest){
+            } else if (i == currentIterator){
                 g2.setColor(yellow);
             } else {
                 g2.setColor(cyan);
@@ -54,7 +53,7 @@ public class SelectionSortVisual extends JComponent {
                 // System.out.println(increment*i + " " + (yLocation + actualHeight));
                 r.setLocation(increment*i, yLocation - actualHeight);
                 r.setSize(increment, actualHeight);
-                if(i == cursor || i == smallest){
+                if(i == cursor || i == currentIterator){
                     g2.fill(r);
                 } else {
                     g2.draw(r);
@@ -63,7 +62,7 @@ public class SelectionSortVisual extends JComponent {
                 // System.out.println(increment*i + " " + yLocation);
                 r.setLocation(increment*i, yLocation);
                 r.setSize(increment, actualHeight);
-                if(i == cursor || i == smallest){
+                if(i == cursor || i == currentIterator){
                     g2.fill(r);
                 } else {
                     g2.draw(r);
@@ -86,55 +85,31 @@ public class SelectionSortVisual extends JComponent {
         return maximum;
     }
 
-    /**
-     * Performs a selection sort on an array of ints
-     * (Postcondition: num array is not empty)
-     * @return sorted array
-     * (Precondition: sorted array)
-     */
-    public int[] selectionSort(){
-        for(int i = 0; i < nums.length; i++){
+    public int[] insertionSort(){
+        for(int i = 1; i < nums.length; i++){
             cursor = i;
-            smallest = getMin(nums, i);
-            int newNumber = nums[smallest];
-            // System.out.print(newNumber);
+            currentIterator = i;
             repaint();
             try {
-                Thread.sleep(50);
+                Thread.sleep(10);
             } catch(InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }
-            nums[smallest] = nums[i];
-            nums[i] = newNumber;
-            // System.out.println("selectionSort: " + System.currentTimeMillis());
+            int currentNum = nums[i];
+            int j;
+            for(j = i - 1; (j >= 0) && nums[j] > currentNum; j--){
+                nums[j+1] = nums[j];
+                repaint();
+                try {
+                    Thread.sleep(10);
+                } catch(InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+                currentIterator = j;
+            }
+            nums[j+1] = currentNum;
         }
         return nums;
-    }
-
-    /**
-     * Returns index of minimum
-     * @param nums the array to find the minimum in
-     * @param index the index to start at
-     * (Postcondition: nums is not empty, index is valid)
-     * @return the index of the minimum number in array
-     * (Precondition: index of minimum number)
-     */
-    public int getMin(int[] nums, int index){
-        int minIndex = index; // starting index
-
-        for(int i = index; i < nums.length; i++){
-            if(nums[minIndex] > nums[i]){
-                minIndex = i;
-                // smallest = i;
-            }
-            // repaint();
-            // try {
-            //     Thread.sleep(5);
-            // } catch(InterruptedException ex) {
-            //     Thread.currentThread().interrupt();
-            // }
-        }
-        return minIndex;
     }
 
 }

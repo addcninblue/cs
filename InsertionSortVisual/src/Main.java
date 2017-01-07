@@ -15,10 +15,13 @@ public class Main extends JComponent{
     public static void main (String [] args){
 
         nums = generateNumbers(200, -100, 100);
+        for(int i : nums){
+            System.out.print(i + " ");
+        }
 
-        JFrame frame = new JFrame("Selection Sort");
-        SelectionSortVisual selectionSort = new SelectionSortVisual(nums);
-        frame.add(selectionSort);
+        JFrame frame = new JFrame("Insertion Sort");
+        InsertionSortVisual insertionSort = new InsertionSortVisual(nums);
+        frame.add(insertionSort);
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         frame.pack();
@@ -32,17 +35,11 @@ public class Main extends JComponent{
         // show screen
         frame.setVisible(true);
 
-        selectionSort.selectionSort();
-
-        // // sort nums
-        // for(int i = 0; i < nums.length; i++){
-        //     System.out.format("%d ", nums[i]);
-        // }
-        // System.out.println();
-        // int[] output = SelectionSort.selectionSort(nums);
-        // for(int i = 0; i < nums.length; i++){
-        //     System.out.format("%d ", nums[i]);
-        // }
+        int[] output = insertionSort.insertionSort();
+        System.out.println();
+        for(int i : output){
+            System.out.print(i + " ");
+        }
 
     }
 
