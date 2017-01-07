@@ -14,7 +14,7 @@ public class Main extends JComponent{
 
     public static void main (String [] args){
 
-        nums = generateNumbers(200, -100, 100);
+        nums = generateNumbers(50, -100, 100);
         for(int i : nums){
             System.out.print(i + " ");
         }

@@ -10,7 +10,7 @@ public class InsertionSortVisual extends JComponent {
 
     private int[] nums; //heights
 
-    private int cursor, currentIterator;
+    private int cursor, currentIterator, finalIterator;
 
     public InsertionSortVisual(int[] nums){
         this.nums = nums;
@@ -26,7 +26,8 @@ public class InsertionSortVisual extends JComponent {
         Graphics2D g2 = (Graphics2D)g;
         Color cyan = new Color(42, 161, 152);
         Color orange = new Color(203, 75, 22);
-        Color yellow = new Color(181,137,0);
+        Color yellow = new Color(181, 137, 0);
+        Color green = new Color(133, 153, 0);
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         int yLocation = screenSize.height / 2;
@@ -41,9 +42,11 @@ public class InsertionSortVisual extends JComponent {
             // if (i % 2 == 0)
             // System.out.format("%s, %s, %s\n", i, cursor, nums[currentIterator]);
             if(i == cursor){
-                g2.setColor(orange);
+                g2.setColor(cyan);
             } else if (i == currentIterator){
                 g2.setColor(yellow);
+            } else if (i == finalIterator) {
+                g2.setColor(green);
             } else {
                 g2.setColor(cyan);
             }
@@ -53,7 +56,7 @@ public class InsertionSortVisual extends JComponent {
                 // System.out.println(increment*i + " " + (yLocation + actualHeight));
                 r.setLocation(increment*i, yLocation - actualHeight);
                 r.setSize(increment, actualHeight);
-                if(i == cursor || i == currentIterator){
+                if(i == cursor || i == currentIterator || i == finalIterator){
                     g2.fill(r);
                 } else {
                     g2.draw(r);
@@ -62,7 +65,7 @@ public class InsertionSortVisual extends JComponent {
                 // System.out.println(increment*i + " " + yLocation);
                 r.setLocation(increment*i, yLocation);
                 r.setSize(increment, actualHeight);
-                if(i == cursor || i == currentIterator){
+                if(i == cursor || i == currentIterator || i == finalIterator){
                     g2.fill(r);
                 } else {
                     g2.draw(r);
@@ -99,14 +102,16 @@ public class InsertionSortVisual extends JComponent {
             int j;
             for(j = i - 1; (j >= 0) && nums[j] > currentNum; j--){
                 nums[j+1] = nums[j];
+                nums[j] = currentNum;
+                currentIterator = j;
                 repaint();
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(100);
                 } catch(InterruptedException ex) {
                     Thread.currentThread().interrupt();
                 }
-                currentIterator = j;
             }
+            finalIterator = j + 1;
             nums[j+1] = currentNum;
         }
         return nums;
